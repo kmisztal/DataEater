@@ -1,6 +1,7 @@
 package pl.misztal.data;
 
 import org.ejml.simple.SimpleMatrix;
+import pl.misztal.data.utils.NumberUtils;
 
 import java.util.Random;
 
