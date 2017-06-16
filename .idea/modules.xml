@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DataEater.iml" filepath="$PROJECT_DIR$/.idea/DataEater.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DataEater.iml" filepath="$PROJECT_DIR$/DataEater.iml" />
     </modules>
   </component>
 </project>
