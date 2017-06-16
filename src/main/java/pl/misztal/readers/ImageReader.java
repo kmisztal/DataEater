@@ -35,7 +35,6 @@ public class ImageReader extends DataReader {
 
         int width = bufferedImage.getWidth();
         int height = bufferedImage.getHeight();
-
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
                 int rgb = bufferedImage.getRGB(j, i);
@@ -49,9 +48,10 @@ public class ImageReader extends DataReader {
                 tempSum += green;
                 tempSum += blue;
                 tempSum = tempSum / 3;
-                weight = (255 - tempSum) * alpha / 255 / 255;
-                if (weight > 0.000_000_001)
-                    result.add(new Point(weight, j, height - i));
+                weight = (255. - tempSum) * alpha / 255. / 255.;
+//                System.out.println(weight);
+//                if (weight > 0.000_000_001)
+                result.add(new Point(1, j, height - i, weight));
             }
         }
         return result;

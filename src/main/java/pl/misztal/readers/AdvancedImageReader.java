@@ -31,7 +31,7 @@ public class AdvancedImageReader {
                 tempSum += blue;
                 tempSum = tempSum / 3;
                 weight = (255 - tempSum) * alpha / 255 / 255;
-                if (weight > 0.000_000_001)
+//                if (weight > 0.000_000_001)
                     result.add(new Point(weight, j, height - i));
             }
         }

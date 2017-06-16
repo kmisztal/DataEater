@@ -10,8 +10,8 @@ import java.util.Random;
  */
 public class Point implements ClusterLike, Comparable<Point> {
 
-    private static final double epsilon = 0.;
-    private final static double delta = 0.01;
+    private static final double epsilon = 1.;
+    private final static double delta = 1;
     private final static Random RANDOM = new Random(System.currentTimeMillis());
     private static SimpleMatrix cov = null;
     private final SimpleMatrix x;

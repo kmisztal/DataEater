@@ -136,9 +136,17 @@ public class Cluster implements ClusterLike {
      * @return
      */
     public Cluster add(ClusterLike B, boolean add) {//THIS + B
-        final double weight_of_sum = this.getWeight() + B.getWeight();
-        final double pA = this.getWeight() / weight_of_sum;
-        final double pB = B.getWeight() / weight_of_sum;
+        double weight_of_sum = this.getWeight() + B.getWeight();
+//        weight_of_sum = weight_of_sum == 0 ? 0.000_000_1 : weight_of_sum;
+        final double pA;
+        final double pB;
+        if (weight_of_sum != 0) {
+            pA = this.getWeight() / weight_of_sum;
+            pB = B.getWeight() / weight_of_sum;
+        } else {
+            pA = this.getWeight();
+            pB = 1;
+        }
         final SimpleMatrix mean_of_sum = this.getMean().scale(pA).plus(B.getMean().scale(pB));
         final SimpleMatrix covariance_of_sum = this.getCov().scale(pA).plus(B.getCov().scale(pB)).plus(this.getMean().minus(B.getMean()).scale(pA * pB).mult(this.getMean().minus(B.getMean()).transpose()));
 
