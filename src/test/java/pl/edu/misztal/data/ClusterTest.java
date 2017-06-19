@@ -1,7 +1,7 @@
-package pl.misztal.data;
+package pl.edu.misztal.data;
 
 import org.junit.jupiter.api.Test;
-import pl.misztal.readers.Data;
+import pl.edu.misztal.readers.Data;
 
 /**
  * Created by krzys on 16.06.2017.

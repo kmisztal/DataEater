@@ -1,4 +1,4 @@
-package pl.misztal.data.utils;
+package pl.edu.misztal.data.utils;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;

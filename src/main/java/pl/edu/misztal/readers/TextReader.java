@@ -1,6 +1,6 @@
-package pl.misztal.readers;
+package pl.edu.misztal.readers;
 
-import pl.misztal.data.Point;
+import pl.edu.misztal.data.Point;
 
 import java.io.*;
 import java.nio.charset.StandardCharsets;

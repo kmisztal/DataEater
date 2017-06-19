@@ -1,7 +1,7 @@
-package pl.misztal.data;
+package pl.edu.misztal.data;
 
 import org.ejml.simple.SimpleMatrix;
-import pl.misztal.data.utils.NumberUtils;
+import pl.edu.misztal.data.utils.NumberUtils;
 
 import java.util.Random;
 

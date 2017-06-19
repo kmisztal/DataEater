@@ -1,4 +1,4 @@
-package pl.misztal.readers;
+package pl.edu.misztal.readers;
 
 import org.junit.jupiter.api.Test;
 
