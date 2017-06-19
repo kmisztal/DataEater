@@ -13,20 +13,20 @@ class DataTest {
         Data data = new Data();
         data.read("src/main/resources/data_test/png/circles.png", "image/png");
 
-        assert data.getSize() == 2036;
+        assert data.getSize() == 100 * 80;//2036;
     }
 
     @Test
     void readBMP() {
         Data data = new Data();
         data.read("src/main/resources/data_test/bmp/example.bmp", "image/bmp");
-        assertEquals(data.getSize(), 116136);
+        assertEquals(data.getSize(), 640 * 893);//116136
     }
 
     @Test
     void readTIFF() {
         Data data = new Data();
         data.read("src/main/resources/data_test/tiff/example.tiff", "image/tiff");
-        assertEquals(data.getSize(), 93902);
+        assertEquals(data.getSize(), 277 * 339);//93902
     }
 }

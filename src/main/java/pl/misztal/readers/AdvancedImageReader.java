@@ -19,20 +19,20 @@ public class AdvancedImageReader {
 
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                int rgb = bufferedImage.getRGB(j, i);
-                int alpha = (rgb >> 24) & 0xFF;
-                int red = (rgb >> 16) & 0xFF;
-                int green = (rgb >> 8) & 0xFF;
-                int blue = (rgb) & 0xFF;
-                double weight = 0;
-                double tempSum = 0;
-                tempSum += red;
-                tempSum += green;
-                tempSum += blue;
-                tempSum = tempSum / 3;
-                weight = (255 - tempSum) * alpha / 255 / 255;
+                final int rgb = bufferedImage.getRGB(j, i);
+                final int alpha = (rgb >> 24) & 0xFF;
+                final int red = (rgb >> 16) & 0xFF;
+                final int green = (rgb >> 8) & 0xFF;
+                final int blue = (rgb) & 0xFF;
+//                double weight = 0;
+//                double tempSum = 0;
+//                tempSum += red;
+//                tempSum += green;
+//                tempSum += blue;
+//                tempSum = tempSum / 3;
+//                weight = (255 - tempSum) * alpha / 255 / 255;
 //                if (weight > 0.000_000_001)
-                    result.add(new Point(weight, j, height - i));
+                result.add(new Point(1, j, height - i, alpha, red, green, blue));
             }
         }
         return result;
