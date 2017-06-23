@@ -1,14 +1,16 @@
 package pl.edu.misztal.data;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Ignore;
+import org.junit.Test;
 import pl.edu.misztal.readers.Data;
 
 /**
  * Created by krzys on 16.06.2017.
  */
-class ClusterTest {
+@Ignore
+public class ClusterTest {
     @Test
-    void add() {
+    public void add() {
 //        Data data = new Data();
 //        data.read("src/main/resources/data_test/png/circles.png", "image/png");
         Point[] points = {
@@ -29,7 +31,7 @@ class ClusterTest {
     }
 
     @Test
-    void addPNG() {
+    public void addPNG() {
         Data data = new Data();
         data.read("src/main/resources/data_test/png/circles.png", "image/png");
 //        Point [] points = {
