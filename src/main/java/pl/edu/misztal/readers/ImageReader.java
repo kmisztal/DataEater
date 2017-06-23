@@ -52,6 +52,7 @@ public class ImageReader extends DataReader {
 //                System.out.println(weight);
 //                if (weight > 0.000_000_001)
                 result.add(new Point(1, j, height - i, alpha, red, green, blue));
+
             }
         }
         return result;
